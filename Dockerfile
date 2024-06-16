@@ -3,7 +3,7 @@ FROM postgres:alpine
 RUN apk update && apk add --no-cache \
     curl
 
-ARG PG_UUIDV7_VERSION=v1.4.1
+ARG PG_UUIDV7_VERSION=v1.5.0
 
 RUN cd "$(mktemp -d)" \
     && curl -LO "https://github.com/fboulnois/pg_uuidv7/releases/download/$PG_UUIDV7_VERSION/{pg_uuidv7.tar.gz,SHA256SUMS}" \
